@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+		<link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+		<link rel="stylesheet" href="{{ "/assets/css/a.css?v=" | append: site.github.build_revision | relative_url }}">
+	</head>
+	<body>
+		<div id="main">
+			<section id="top">
+				<h1 id="logo">
+					<img src="{{ "/assets/images/logo.gif" }}" />
+					<span class="sr-only">All you can sweet</span>
+				</h1>
+				<div id="blurb">
+					{{ content }}
+				</div>
+			</section>
+			<section id="sweets">
+				{% for sweet in site.sweets offset:offset %}
+				<div class="sweet">
+					<div class="sweet-image">
+						<img src="/assets/images/sweets/{{ sweet.image }}" />
+					</div>
+					<div class="sweet-inner">
+						<h3 class="sweet-header">
+							<a href="{{ sweet.url }}">{{ sweet.title }}</a>
+						</h3>
+						<div "sweet-content">
+							{{ sweet.content }}
+						</div>
+						<div class="sweet-cost">
+							<span>
+								${{ sweet.cost | precision: 3 }} / {{ sweet.grams }}g (approx)
+							</span>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</section>
+		</div>
+	</body>
+</html>
