@@ -4,6 +4,11 @@ title: All You Can Sweet
 ---
 
 ## Introductory blurb!
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This top content can be edited in the file 'index.md'.
+
+The below cards appear automatically when you add a file under the '/sweets' directory. At the top of that
+file you put the information about the sweet (price, weight, short description, etc). Those values automatically
+appear in the cards below as well as on the order form.  At the bottom of that file you can put a longer description
+and images - these are shown when you click through to that sweets page.
+

@@ -15,13 +15,15 @@
 					<img src="{{ "/assets/images/logo.gif" | relative_url }}" />
 					<span class="sr-only">All you can sweet</span>
 				</h1>
-				<div id="blurb">
-					{{ content }}
+				<div id="content">
+					<div id="top-content">
+						{{ content }}
+					</div>
 				</div>
 			</section>
 			<section id="sweets">
 				{% for sweet in site.sweets offset:offset %}
-				<a href="{{ sweet.url | relative_url }}" class="sweet">
+				<a href="{{ sweet.url | relative_url }}" class="sweet card">
 					<div class="sweet-image">
 						<img src="{{ "/assets/sweets-thumbnails/" | relative_url }}{{ sweet.image }}" />
 					</div>
@@ -40,6 +42,12 @@
 					</div>
 				</a>
 				{% endfor %}
+
+				<a href="{{ '/order.html' | relative_url }}" class="card order-card">
+					<h3>Order now</h3>
+					Make an order request and we will contact you to confirm time and details.
+				</a>
+
 			</section>
 		</div>
 	</body>

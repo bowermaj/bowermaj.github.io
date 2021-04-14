@@ -58,6 +58,13 @@ body {
 	border-radius: 1em;
 }
 
+#top-content {
+	img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+}
+
 #top {
 	@media screen and (min-width: 380px) {
 		display: flex;
@@ -81,7 +88,7 @@ body {
 		}
 	}
 
-	#blurb {
+	#content {
 		h2 {
 			display: inline-block;
 			font-weight: bold;
@@ -113,13 +120,15 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		xalign-items: start;
+		justify-content: start;
 	}
 
-	.sweet {
+	.card {
 		display: flex;
 		min-height: 150px;
 		flex: 0 32%;
-		margin-bottom: 2%; /* (100-32*3)/2 */
+		margin: 0.4em 0.3em;
 		border-radius: 1em;
 		color: #fff;
 		text-decoration: none;
@@ -183,6 +192,22 @@ body {
 			}
 		}
 	}
+
+	.order-card {
+		background-color: transparent;
+		border: 3px solid #555;
+		color: #111;
+		display: block;
+		text-align: center;
+		h3 {
+			text-align: center;
+			display: block;
+			margin: 1em auto;
+		}
+		&:hover {
+			background: #FFFF99;
+		}
+	}
 }
 
 
@@ -232,6 +257,15 @@ input {
 	width: 80%;
 	&#postcode {
 		width: 5em;
+	}
+	&[type=submit] {
+		background-color: #009879;
+		color: #fff;
+		padding: 1em;
+		margin: 0 1em;
+		border: none;
+		border-radius: 1em;
+		display: inline-block;
 	}
 }
 

@@ -7,4 +7,8 @@ grams:	"180"
 description: "Rocky road - available in milk, white or dark chocolate.  Full of all the favourites, marshmallows, peanuts, jellies and coconut."
 ---
 
-That melt in your mouth chocolate fudge that is irresistible.
+## Rocky road
+
+Rocky road - available in milk, white or dark chocolate.  Full of all the favourites, marshmallows, peanuts, jellies and coconut.
+
+![Freckles]({{ site.baseurl }}/assets/images/rocky-road-1.jpg)

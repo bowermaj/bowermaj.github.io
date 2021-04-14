@@ -11,14 +11,18 @@
 	<body>
 		<div id="main">
 			<section id="top">
-				<a id="logo" href="{{ '/' | relative_url }}">
-					<h1>
-						<img src="{{ "/assets/images/logo.gif" | relative_url }}" />
-						<span class="sr-only">All you can sweet</span>
-					</h1>
-				</a>
-				<div id="blurb">
-					{{ content }}
+				<div id="logo">
+					<a href="{{ '/' | relative_url }}">
+						<h1>
+							<img src="{{ "/assets/images/logo.gif" | relative_url }}" />
+							<span class="sr-only">All you can sweet</span>
+						</h1>
+					</a>
+				</div>
+				<div id="content">
+					<div id="top-content">
+						{{ content }}
+					</div>
 				</div>
 			</section>
 		</div>
