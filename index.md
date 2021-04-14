@@ -1,5 +1,6 @@
 ---
 layout: home
+title: All You Can Sweet
 ---
 
 ## Introductory blurb!

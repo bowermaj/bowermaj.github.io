@@ -1,9 +1,10 @@
 ---
 layout: "post"
-title:  "Freckles"
-date:	"2021-04-12 16:06:42 +1000"
-image: 	"freckles.jpg"
-cost: 	"1.50"
-grams:	"30"
+title:  "Rocky road"
+image: 	"rocky-road.jpg"
+cost: 	"5.00"
+grams:	"180"
+description: "Rocky road - available in milk, white or dark chocolate.  Full of all the favourites, marshmallows, peanuts, jellies and coconut."
 ---
-Custom made freckles.  A unique and colourful as well as delicious treat for your special occasion.
+
+That melt in your mouth chocolate fudge that is irresistible.

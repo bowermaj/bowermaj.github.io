@@ -6,8 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		{% seo %}
-		<link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-		<link rel="stylesheet" href="{{ "/assets/css/a.css?v=" | append: site.github.build_revision | relative_url }}">
+		<link rel="stylesheet" href="{{ "/assets/styles.css?v=" | append: site.github.build_revision | relative_url }}">
 	</head>
 	<body>
 		<div id="main">
@@ -22,16 +21,16 @@
 			</section>
 			<section id="sweets">
 				{% for sweet in site.sweets offset:offset %}
-				<div class="sweet">
+				<a href="{{ sweet.url | relative_url }}" class="sweet">
 					<div class="sweet-image">
-						<img src="{{ "/assets/images/sweets/" | relative_url }}{{ sweet.image }}" />
+						<img src="{{ "/assets/sweets-thumbnails/" | relative_url }}{{ sweet.image }}" />
 					</div>
 					<div class="sweet-inner">
 						<h3 class="sweet-header">
-							<a href="{{ sweet.url | relative_url }}">{{ sweet.title }}</a>
+							{{ sweet.title }}
 						</h3>
 						<div "sweet-content">
-							{{ sweet.content }}
+							{{ sweet.description }}
 						</div>
 						<div class="sweet-cost">
 							<span>
@@ -39,7 +38,7 @@
 							</span>
 						</div>
 					</div>
-				</div>
+				</a>
 				{% endfor %}
 			</section>
 		</div>
