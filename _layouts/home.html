@@ -13,7 +13,7 @@
 		<div id="main">
 			<section id="top">
 				<h1 id="logo">
-					<img src="{{ "/assets/images/logo.gif" }}" />
+					<img src="{{ "/assets/images/logo.gif" | relative_url }}" />
 					<span class="sr-only">All you can sweet</span>
 				</h1>
 				<div id="blurb">
@@ -24,11 +24,11 @@
 				{% for sweet in site.sweets offset:offset %}
 				<div class="sweet">
 					<div class="sweet-image">
-						<img src="/assets/images/sweets/{{ sweet.image }}" />
+						<img src="{{ "/assets/images/sweets/" | relative_url }}{{ sweet.image }}" />
 					</div>
 					<div class="sweet-inner">
 						<h3 class="sweet-header">
-							<a href="{{ sweet.url }}">{{ sweet.title }}</a>
+							<a href="{{ sweet.url | relative_url }}">{{ sweet.title }}</a>
 						</h3>
 						<div "sweet-content">
 							{{ sweet.content }}
