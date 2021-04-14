@@ -26,24 +26,21 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-# theme: minima
-plugins:
-  - jekyll-feed
 
 collections:
   sweets:
     output: true
 
-lsi: false
-safe: true
-source: ./
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+# lsi: false
+# safe: true
+# source: ./
+# incremental: false
+# highlighter: rouge
+# gist:
+# noscript: false
+# kramdown:
+# math_engine: mathjax
+# syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
