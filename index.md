@@ -3,14 +3,12 @@ layout: home
 title: All You Can Sweet
 ---
 
-## Introductory blurb!
+## Welcome!
 
-This top content can be edited in the file 'index.md'.
+All You Can Sweet is a beautique confectionary store, catering to orders large and small.
 
-The below cards appear automatically when you add a file under the '/sweets' directory. At the top of that
-file you put the information about the sweet (price, weight, short description, etc). Those values automatically
-appear in the cards below as well as on the order form.  At the bottom of that file you can put a longer description
-and images - these are shown when you click through to that sweets page.
+Our selection of sweets are all hand made in a government approved kitchen. Check out the expanding range of delicious sweets below 😊
 
+You can request an order with us through our [online form](/order). No immediate payment necessary, we will  first be in touch to organise a time and delivery.
 
-
+You can also meet us at various markets around Brisbane.  Check out our [Facebook](https://www.facebook.com/allyoucansweet20) page for all the latest news and dates!

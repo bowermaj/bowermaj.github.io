@@ -128,7 +128,7 @@ body {
 		display: flex;
 		min-height: 150px;
 		flex: 0 32%;
-		margin: 0.4em 0.3em;
+		margin: 0.5em 0.4em;
 		border-radius: 1em;
 		color: #fff;
 		text-decoration: none;
@@ -163,6 +163,7 @@ body {
 					opacity: 0.5;
 					content: ' \25B6';
 					font-size: 0.7em;
+					margin-left: 0.5em;
 				}
 			}
 
@@ -202,11 +203,26 @@ body {
 		h3 {
 			text-align: center;
 			display: block;
-			margin: 1em auto;
+			margin: 0.5em auto 0 auto;
+			font-size: 1.5em;
+
+				&::after {
+					content: ' \25B6';
+					font-size: 0.7em;
+					margin-left: 0.5em;
+				}
 		}
 		&:hover {
 			background: #FFFF99;
 		}
+	}
+
+	.order-card-icon {
+		width: 3em;
+		height: 3em;
+		margin: 1em auto;
+		
+
 	}
 }
 

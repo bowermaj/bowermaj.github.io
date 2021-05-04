@@ -20,12 +20,12 @@ body { font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans"
 @media screen and (min-width: 380px) { #top #content { padding: 2em; } }
 
 @media screen and (min-width: 380px) { #sweets { display: flex; flex-wrap: wrap; justify-content: space-between; xalign-items: start; justify-content: start; } }
-#sweets .card { display: flex; min-height: 150px; flex: 0 32%; margin: 0.4em 0.3em; border-radius: 1em; color: #fff; text-decoration: none; background-color: #2e292a; }
+#sweets .card { display: flex; min-height: 150px; flex: 0 32%; margin: 0.5em 0.4em; border-radius: 1em; color: #fff; text-decoration: none; background-color: #2e292a; }
 #sweets .card .sweet-image { position: relative; width: 40%; overflow: hidden; }
 #sweets .card .sweet-image img { position: absolute; top: 0px; left: 0px; border-top-left-radius: 1em; border-bottom-left-radius: 1em; width: 100%; height: 100%; object-fit: cover; }
 #sweets .card .sweet-inner { width: 60%; padding: 0.75em; font-size: 0.9em; display: flex; flex-flow: row wrap; }
 #sweets .card .sweet-inner .sweet-header { margin: 0 0 0.7em 0; }
-#sweets .card .sweet-inner .sweet-header::after { opacity: 0.5; content: ' \25B6'; font-size: 0.7em; }
+#sweets .card .sweet-inner .sweet-header::after { opacity: 0.5; content: ' \25B6'; font-size: 0.7em; margin-left: 0.5em; }
 #sweets .card .sweet-inner .sweet-cost { margin: 0 0 0 auto; font-style: italic; font-size: 0.9em; margin-top: 1em; }
 #sweets .card .sweet-inner .sweet-cost span { background-color: #555; border-radius: 1em; padding: 0.2em 0.5em; }
 #sweets .card:hover { background-color: #333; }
@@ -33,8 +33,10 @@ body { font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans"
 #sweets .card:hover img { opacity: 0.5; }
 #sweets .card:hover .sweet-header::after { opacity: 1; }
 #sweets .order-card { background-color: transparent; border: 3px solid #555; color: #111; display: block; text-align: center; }
-#sweets .order-card h3 { text-align: center; display: block; margin: 1em auto; }
+#sweets .order-card h3 { text-align: center; display: block; margin: 0.5em auto 0 auto; font-size: 1.5em; }
+#sweets .order-card h3::after { content: ' \25B6'; font-size: 0.7em; margin-left: 0.5em; }
 #sweets .order-card:hover { background: #FFFF99; }
+#sweets .order-card-icon { width: 3em; height: 3em; margin: 1em auto; }
 
 table { background: #ddd; border-collapse: collapse; margin: 1em 0; font-size: 0.9em; font-family: sans-serif; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
 table select { font-size: 1.1em; }

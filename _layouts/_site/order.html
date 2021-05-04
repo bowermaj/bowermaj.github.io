@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		{% seo %}
+		<link rel="stylesheet" href="{{ "/assets/styles.css?v=" | append: site.github.build_revision | relative_url }}">
+	</head>
+	<body>
+		<div id="main">
+			<section id="top">
+				<div id="logo">
+					<a href="{{ '/' | relative_url }}">
+						<h1>
+							<img src="{{ '/assets/images/logo.gif' | relative_url }}" />
+							<span class="sr-only">All you can sweet</span>
+						</h1>
+					</a>
+				</div>
+				<div id="content">
+					<div id="top-content">
+						{{ content }}
+					</div>
+
+					<form action="https://formspree.io/f/xdoyknnw" method="POST">
+						<table>
+							<thead>
+								<td><span class="sr-only">Name of sweet</span></td>
+								<td>Cost per item</td>
+								<td>Quantity</td>
+							</thead>
+							{% for sweet in site.sweets offset:offset %}
+							<tr>
+								<td>{{ sweet.title }}</td>
+								<td><strong>${{ sweet.cost | precision: 3 }}</strong> (approx {{ sweet.grams }}g)</td>
+								<td>
+
+									<select name="{{ sweet.title }}">
+										{% for i in (0..50) %}
+										<option value="{{ i | times: sweet.cost }}">{{ i }}</option>
+										{% endfor %}
+									</select>
+								</td>
+							</tr>
+							{% endfor %}
+						</table>
+
+						<div class="tally">
+							<div class="tally-inner">
+								Total: $<span id="total">0</span>
+							</div>
+						</div>
+
+						<p>
+							<label>
+								<strong>Your full name</strong>:
+								<br/>
+								<input id="fullname" type="text" required />
+							</label>
+						</p>
+						
+						<p>
+							<label>
+								<strong>Street name and number</strong> (of address to post):
+								<br/>
+								<input id="street" type="text" required />
+							</label>
+						</p>
+
+						<p>
+							<label>
+								<strong>Suburb</strong> (of address to post to):
+								<br/>
+								<input id="suburb" type="text" required />
+							</label>
+						</p>
+
+						<p>
+							<label>
+								<strong>Postcode</strong> (of address to post to):
+								<br/>
+								<input id="postcode" type="text" size="4" maxlength="4" required />
+							</label>
+						</p>
+
+						<p>
+							<label>
+								<strong>Your phone number</strong>
+								<br/>
+								<input id="phone" type="text" maxlength="15" required />
+							</label>
+						</p>
+
+						<p>
+							<label>
+								<strong>Your email address</strong>
+								<br/>
+								<input id="email" type="tel" width="4" required />
+							</label>
+						</p>
+
+						<textarea name="message" id="message" style="display:none"></textarea>
+
+						<input type="submit" value="Submit order request" />
+
+					</form>
+
+					<script>
+						var 
+							form = document.querySelector('form'),
+							selects = document.querySelectorAll('select'),
+							total = document.getElementById('total'),
+							fullname = document.getElementById('fullname'),
+							street = document.getElementById('street'),
+							postcode = document.getElementById('postcode'),
+							suburb = document.getElementById('suburb'),
+							phone = document.getElementById('phone'),
+							email = document.getElementById('email'),
+							message = document.getElementById('message');
+						form.addEventListener('change', function() {
+							var tally = 0,
+								list = '';
+							[].forEach.call(selects, function(select) {
+								tally = tally + (parseInt(select.value) || 0);
+								list = list + `${select.name}: $${select.value} worth\n`;
+							});
+							total.innerHTML = tally;
+							message.innerHTML = 
+								'New order!\n' +
+								'-----------------\n' +
+								'\n\nName: ' + fullname.value +
+								'\n\nStreet address: ' + street.value +
+								'\n\nSuburb: ' + suburb.value +
+								'\n\nPostcode: ' + postcode.value +
+								'\n\nPhone: ' + phone.value +
+								'\n\nEmail: ' + email.value +
+								'\n\n\n\nORDER DETAILS: \n' +
+								'------------------\n' +
+								list + '\n' +
+								'Total value: $' + tally;
+						});
+					</script>
+
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
