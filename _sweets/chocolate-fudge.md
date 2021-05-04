@@ -11,4 +11,4 @@ description: "That melt in your mouth chocolate fudge that is irresistible."
 
 That melt in your mouth chocolate fudge that is irresistible.
 
-![Chocolate fudge]({{ site.baseurl }}assets/images/chocolate-fudge-1.jpg)
+![Chocolate fudge]({{ site.baseurl }}/assets/images/chocolate-fudge-1.jpg)

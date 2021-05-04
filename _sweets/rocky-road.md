@@ -11,4 +11,4 @@ description: "Rocky road - available in milk, white or dark chocolate.  Full of 
 
 Rocky road - available in milk, white or dark chocolate.  Full of all the favourites, marshmallows, peanuts, jellies and coconut.
 
-![Freckles]({{ site.baseurl }}assets/images/rocky-road-1.jpg)
+![Rocky road]({{ site.baseurl }}/assets/images/rocky-road-1.jpg)

@@ -11,4 +11,4 @@ description: "Caramel fudge! The crumbly melt in your mouth kind. 😋"
 
 Caramel fudge! The crumbly melt in your mouth kind. 😋
 
-![Caramel fudge]({{ site.baseurl }}assets/images/caramel-fudge-1.jpg)
+![Caramel fudge]({{ site.baseurl }}/assets/images/caramel-fudge-1.jpg)
