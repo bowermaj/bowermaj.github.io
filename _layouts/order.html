@@ -24,42 +24,45 @@
 						{{ content }}
 					</div>
 
+
 					<form action="https://formspree.io/f/xdoyknnw" method="POST">
-						<table>
-							<thead>
-								<td><span class="sr-only">Name of sweet</span></td>
-								<td>Cost per item</td>
-								<td>Quantity</td>
-							</thead>
-							{% for sweet in site.sweets offset:offset %}
-							<tr>
-								<td>{{ sweet.title }}</td>
-								<td><strong>${{ sweet.cost | precision: 3 }}</strong> (approx {{ sweet.grams }}g)</td>
-								<td>
+						<div style="display: inline-block">
+							<table>
+								<thead>
+									<td><span class="sr-only">Name of sweet</span></td>
+									<td>Cost per item</td>
+									<td>Quantity</td>
+								</thead>
+								{% for sweet in site.sweets offset:offset %}
+								<tr>
+									<td>{{ sweet.title }}</td>
+									<td><strong>${{ sweet.cost | precision: 3 }}</strong> (approx {{ sweet.grams }}g)</td>
+									<td>
 
-									<select name="{{ sweet.title }}">
-										{% for i in (0..50) %}
-										<option value="{{ i | times: sweet.cost }}">{{ i }}</option>
-										{% endfor %}
-									</select>
-								</td>
-							</tr>
-							{% endfor %}
-						</table>
+										<select name="{{ sweet.title }}" data-cost="{{ sweet.cost }}">
+											{% for i in (0..50) %}
+											<option value="{{ i }}">{{ i }}</option>
+											{% endfor %}
+										</select>
+									</td>
+								</tr>
+								{% endfor %}
+							</table>
 
-						<div class="tally">
-							<div class="tally-inner">
-								Total: $<span id="total">0</span>
+							<div class="tally">
+								<div class="tally-inner">
+									Total: $<span id="total">0</span>
+								</div>
 							</div>
-						</div>
 
-						<p>
-							<label>
-								<strong>Your full name</strong>:
-								<br/>
-								<input id="fullname" type="text" required />
-							</label>
-						</p>
+							<p>
+								<label>
+									<strong>Your full name</strong>:
+									<br/>
+									<input id="fullname" type="text" required />
+								</label>
+							</p>
+						</div>
 						
 						<p>
 							<label>
@@ -123,10 +126,11 @@
 							var tally = 0,
 								list = '';
 							[].forEach.call(selects, function(select) {
-								tally = tally + (parseInt(select.value) || 0);
-								list = list + `${select.name}: $${select.value} worth\n`;
+								var cost = (parseFloat(select.getAttribute('data-cost')) || 0);
+								tally = (tally + (parseInt(select.value) || 0) * cost);
+								list = list + `${select.name}: ${select.value} units (at $${cost.toFixed(2)}ea)\n`;
 							});
-							total.innerHTML = tally;
+							total.innerHTML = tally.toFixed(2);
 							message.innerHTML = 
 								'New order!\n' +
 								'-----------------\n' +
@@ -139,7 +143,7 @@
 								'\n\n\n\nORDER DETAILS: \n' +
 								'------------------\n' +
 								list + '\n' +
-								'Total value: $' + tally;
+								'Total value: $' + tally.toFixed(2);
 						});
 					</script>
 
