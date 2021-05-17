@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: 'Spotti dots share packs'
-image: 'spotti-dots-share-packs.png'
+image: 'spotti-dots-share-packs.jpg'
 cost: '40'
 grams: '900'
 description: 'A set of spotti dots to help celebrate birthdays, end of school, performances and many other occasions.'
