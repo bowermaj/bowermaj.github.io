@@ -5,7 +5,7 @@ title: All You Can Sweet!
 
 ## Welcome!
 
-All You Can Sweet is a beautique confectionary store, catering to orders large and small.
+all You Can Sweet is a beautique confectionary store, catering to orders large and small.
 
 Our selection of sweets are all hand made in a government approved kitchen. Check out the expanding range of delicious sweets below 😊
 
