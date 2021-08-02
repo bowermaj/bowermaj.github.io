@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title:  "Hot chocolate bomb"
-image: 	"choc-bomb.jpg"
+image: 	"choc-bombs.jpg"
 cost: 	"4.00"
 grams:	"65"
 description: "Just add hot milk for a delicious explosion of hot chocolate and marshmallows 😋"
