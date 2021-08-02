@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title:  "caramel fudge"
-image: 	"caramel-fudge-1.jpg"
+image: 	"caramel-fudge.jpg"
 cost: 	"5.00"
 grams:	"170"
 description: "The crumbly melt in your mouth kind! 😋"
