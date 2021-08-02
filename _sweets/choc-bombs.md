@@ -11,4 +11,4 @@ description: "Just add hot milk for a delicious explosion of hot chocolate and m
 
 Hot Chocolate Bombs! Just add hot milk for a delicious explosion of hot chocolate and marshmallows 😋
 
-![Choc bombs]({{ site.baseurl }}/assets/images/choc-bombs.jpg)
+![Choc bombs]({{ site.baseurl }}/assets/images/choc-bomb.jpg)
