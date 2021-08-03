@@ -1,6 +1,6 @@
 ---
 layout: 'post'
-title: 'Dotti discs share packs'
+title: 'Dotti discs share packs (30 items)'
 image: 'dotti-discs-share-packs.jpg'
 cost: '40'
 grams: '900'
